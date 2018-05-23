@@ -21,5 +21,5 @@
 2.登陆成功之后创建session，同时设置session的有效时长10s。在此之间，eclipse的控制台打印session的信息。
 3.页面跳转到main.jsp之后显示session信息。
 4.点击main.jsp的安全退出之后系统才真正退出。在一次登陆成功后，如果不按照此过程退出，再次登陆即使账号密码信息输入有误系统一样可以正常登陆。
-    此过程使用Shiro的logout，系统正常退出后session自动销毁。
+此过程使用Shiro的logout，系统正常退出后session自动销毁。
 5.main.jsp页面10s之内无操作session销毁，登陆失效。
