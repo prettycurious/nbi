@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--  
+	<settings>
+		 可以使用延迟加载（懒加载）；(按需加载)
+		 	Employee==>Dept：
+		 		我们每次查询Employee对象的时候，都将一起查询出来。
+		 		部门信息在我们使用的时候再去查询；
+		 		分段查询的基础之上加上两个配置：
+		显示的指定每个我们需要更改的配置的值，即使他是默认的。防止版本更新带来的问题
+		<setting name="lazyLoadingEnabled" value="true" />
+		<setting name="aggressiveLazyLoading" value="false" />
+	</settings>
+	-->
+
+	<!-- 别名 -->
+	<typeAliases>
+		<package name="com.nbi.entity" />
+	</typeAliases>
+
+</configuration>
