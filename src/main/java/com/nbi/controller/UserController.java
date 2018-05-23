@@ -2,8 +2,6 @@ package com.nbi.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,7 +23,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.nbi.util.ResponseUtil;
-import com.nbi.util.PswUtil;
 
 import net.sf.json.JSONObject;
 
@@ -75,14 +72,13 @@ public class UserController {
 				// 跳转地址
 				result.put("back_url", url);
 				// 设置session
-				Map<String, Object> map = new HashMap<String, Object>();
 				User resultUser = userService.loginShiro(name);
 				// System.out.println(resultUser);
 
 				// session的使用
 				HttpSession session = request.getSession();
 				session.setAttribute("loginUser", resultUser);
-				session.setMaxInactiveInterval(10);//以秒为单位 
+				session.setMaxInactiveInterval(10);// 以秒为单位
 
 			}
 			// 若没有指定的账户, 则 shiro 将会抛出 UnknownAccountException 异常.

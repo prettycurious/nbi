@@ -122,17 +122,13 @@ span {
 						success : function(result) {
 							console.log(result);
 							if (result.status != 100) {
-								$("#error0").text(
-										result.message);
+								$("#error0").text(result.message);
 								return;
 							} else {
-								$("#error0").text(
-										result.message);
-								setTimeout(
-										function() {
+								$("#error0").text(result.message);
+								setTimeout(function() {
 											//登录返回
-											window.location.href = result.back_url
-													|| "${pageContext.request.contextPath}/";
+											window.location.href = result.back_url || "${pageContext.request.contextPath}/";
 										}, 500)
 							}
 						},
