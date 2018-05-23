@@ -1,0 +1,14 @@
+@startuml  
+digraph G {
+node [peripheries=2 style=filled color="#eecc80"]
+edge [color="sienna" fontcolor="green"]
+login -> URL[label=post];
+URL -> main[label=go];
+URL -> message[label=false];
+main -> session[label=create];
+main -> session[label=show];
+main ->logout[label=shiro];
+session -> console[label=print];
+session -> destroy[label=seconds];
+} 
+@enduml  
