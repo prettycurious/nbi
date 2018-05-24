@@ -16,6 +16,7 @@
 7.代码通过eclipse Git插件上传至GitHub
 8.使用MySQL数据库
 9.使用Tomcat服务器
+10.使用PlantUML制作流程图
 
 运行过程：
 1.启动login.jsp页面。输入正确的账号密码信息，使用ajax发送POST请求，实现异步信息发送。如果系统显示登陆成功，自动跳转到main.jsp页面。如果信息输入有误提示对应错误信息。
